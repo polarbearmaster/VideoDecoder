@@ -268,15 +268,6 @@ static const GLfloat kColorConversion709[] = {
     glUniform1i(uniforms[UNIFORM_UV], 1);
     glUniform1f(uniforms[UNIFORM_ROTATION_ANGLE], 0);
     glUniformMatrix3fv(uniforms[UNIFORM_COLOR_CONVERSION_MATRIX], 1, GL_FALSE, _preferredConversion);
-    
-//    // Create CVOpenGLESTextureCacheRef for optimal CVPixelBufferRef to GLES texture converison.
-//    if (_videoTextureCache) {
-//        CVReturn err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, NULL, _context, NULL, &_videoTextureCache);
-//        if (err != noErr) {
-//            NSLog(@"Error at CVOpenGLESTextureCacheCreate %d", err);
-//            return;
-//        }
-//    }
 }
 
 // MARK: Utilities
