@@ -13,6 +13,9 @@
 		B9AD50D51E6E470A000EA8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9AD50D31E6E470A000EA8E5 /* Main.storyboard */; };
 		B9AD50D71E6E470A000EA8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9AD50D61E6E470A000EA8E5 /* Assets.xcassets */; };
 		B9AD50DA1E6E470A000EA8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9AD50D81E6E470A000EA8E5 /* LaunchScreen.storyboard */; };
+		B9AD50E31E6E47EB000EA8E5 /* AAPLEAGLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AD50E21E6E47EB000EA8E5 /* AAPLEAGLLayer.m */; };
+		B9AD50ED1E6EA29D000EA8E5 /* VideoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AD50EC1E6EA29D000EA8E5 /* VideoParser.m */; };
+		B9AD50EF1E6EAC94000EA8E5 /* mtv.h264 in Resources */ = {isa = PBXBuildFile; fileRef = B9AD50EE1E6EAC94000EA8E5 /* mtv.h264 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		B9AD50D61E6E470A000EA8E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9AD50D91E6E470A000EA8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9AD50DB1E6E470A000EA8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9AD50E11E6E47EB000EA8E5 /* AAPLEAGLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLEAGLLayer.h; sourceTree = "<group>"; };
+		B9AD50E21E6E47EB000EA8E5 /* AAPLEAGLLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLEAGLLayer.m; sourceTree = "<group>"; };
+		B9AD50EB1E6EA29D000EA8E5 /* VideoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoParser.h; sourceTree = "<group>"; };
+		B9AD50EC1E6EA29D000EA8E5 /* VideoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoParser.m; sourceTree = "<group>"; };
+		B9AD50EE1E6EAC94000EA8E5 /* mtv.h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mtv.h264; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +66,15 @@
 		B9AD50C91E6E470A000EA8E5 /* VideoDecode */ = {
 			isa = PBXGroup;
 			children = (
+				B9AD50EE1E6EAC94000EA8E5 /* mtv.h264 */,
 				B9AD50CD1E6E470A000EA8E5 /* AppDelegate.h */,
 				B9AD50CE1E6E470A000EA8E5 /* AppDelegate.m */,
 				B9AD50D01E6E470A000EA8E5 /* ViewController.h */,
 				B9AD50D11E6E470A000EA8E5 /* ViewController.m */,
+				B9AD50EB1E6EA29D000EA8E5 /* VideoParser.h */,
+				B9AD50EC1E6EA29D000EA8E5 /* VideoParser.m */,
+				B9AD50E11E6E47EB000EA8E5 /* AAPLEAGLLayer.h */,
+				B9AD50E21E6E47EB000EA8E5 /* AAPLEAGLLayer.m */,
 				B9AD50D31E6E470A000EA8E5 /* Main.storyboard */,
 				B9AD50D61E6E470A000EA8E5 /* Assets.xcassets */,
 				B9AD50D81E6E470A000EA8E5 /* LaunchScreen.storyboard */,
@@ -139,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9AD50DA1E6E470A000EA8E5 /* LaunchScreen.storyboard in Resources */,
+				B9AD50EF1E6EAC94000EA8E5 /* mtv.h264 in Resources */,
 				B9AD50D71E6E470A000EA8E5 /* Assets.xcassets in Resources */,
 				B9AD50D51E6E470A000EA8E5 /* Main.storyboard in Resources */,
 			);
@@ -153,6 +167,8 @@
 			files = (
 				B9AD50D21E6E470A000EA8E5 /* ViewController.m in Sources */,
 				B9AD50CF1E6E470A000EA8E5 /* AppDelegate.m in Sources */,
+				B9AD50ED1E6EA29D000EA8E5 /* VideoParser.m in Sources */,
+				B9AD50E31E6E47EB000EA8E5 /* AAPLEAGLLayer.m in Sources */,
 				B9AD50CC1E6E470A000EA8E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -260,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
