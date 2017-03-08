@@ -343,6 +343,7 @@ const GLchar *shader_vsh = (const GLchar*)"attribute vec4 position;"
     GLuint vertShader, fragShader;
     
     // Create the shader program.
+    self.program = glCreateProgram();
     
     // Create and compile the vertex shader.
     if (![self compileShader:&vertShader type:GL_VERTEX_SHADER string:shader_vsh]) {
