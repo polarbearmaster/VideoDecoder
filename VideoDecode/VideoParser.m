@@ -52,23 +52,23 @@ const uint8_t kStartCode[4] = {0, 0, 0, 1};
 }
 
 - (VideoPacket *)nextPacket {
-    if (_bufferSize < _bufferCap && self.fileStream.hasBytesAvailable) {
-        NSInteger readBytes = [ self.fileStream read:_buffer + _bufferSize maxLength:_bufferCap - _bufferSize ];
+    if(_bufferSize < _bufferCap && self.fileStream.hasBytesAvailable) {
+        NSInteger readBytes = [self.fileStream read:_buffer + _bufferSize maxLength:_bufferCap - _bufferSize];
         _bufferSize += readBytes;
     }
     
-    if (memcmp(_buffer, kStartCode, 4) != 0) {
+    if(memcmp(_buffer, kStartCode, 4) != 0) {
         return nil;
     }
     
-    if (_bufferSize >= 5) {
+    if(_bufferSize >= 5) {
         uint8_t *bufferBegin = _buffer + 4;
         uint8_t *bufferEnd = _buffer + _bufferSize;
-        while (bufferBegin != bufferEnd) {
-            if (*bufferBegin == 0x01) {
-                if (memcmp(bufferBegin - 3, kStartCode, 4) == 0) {
+        while(bufferBegin != bufferEnd) {
+            if(*bufferBegin == 0x01) {
+                if(memcmp(bufferBegin - 3, kStartCode, 4) == 0) {
                     NSInteger packetSize = bufferBegin - _buffer - 3;
-                    VideoPacket *vp = [[VideoPacket alloc]initWithSize:packetSize];
+                    VideoPacket *vp = [[VideoPacket alloc] initWithSize:packetSize];
                     memcpy(vp.buffer, _buffer, packetSize);
                     
                     memmove(_buffer, _buffer + packetSize, _bufferSize - packetSize);
@@ -82,6 +82,7 @@ const uint8_t kStartCode[4] = {0, 0, 0, 1};
     }
     
     return nil;
+
 }
 
 - (void)close {
