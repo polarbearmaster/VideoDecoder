@@ -123,7 +123,7 @@
 				TargetAttributes = {
 					B9AD50C61E6E470A000EA8E5 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7TWV6233J9;
+						DevelopmentTeam = 58Q3W62R6N;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -287,7 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7TWV6233J9;
+				DEVELOPMENT_TEAM = 58Q3W62R6N;
 				INFOPLIST_FILE = VideoDecode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.VideoDecode;
@@ -299,7 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7TWV6233J9;
+				DEVELOPMENT_TEAM = 58Q3W62R6N;
 				INFOPLIST_FILE = VideoDecode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuneec.VideoDecode;
@@ -326,6 +326,7 @@
 				B9AD50E01E6E470A000EA8E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
